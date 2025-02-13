@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: fooocus-app  # Choose a name for your Render app
+    runtime: docker
+    dockerfilePath: Dockerfile
+    startCommand: "" # Not needed as CMD is in Dockerfile
+    port: 7860
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1" # Optional: Ensures logs are printed immediately
